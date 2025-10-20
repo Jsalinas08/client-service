@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
   private
 
   def unprocessable_entity(exception)
+    publish_event(
+      payload: log_request_payload_error("422", exception.record.errors.full_messages)
+    )
     render json: { errors: exception.record.errors }, status: __method__
   end
 
@@ -23,5 +26,4 @@ class ApplicationController < ActionController::Base
   def not_found
     render json: { error: I18n.t('errors.not_found') }, status: :not_found
   end
-
 end
