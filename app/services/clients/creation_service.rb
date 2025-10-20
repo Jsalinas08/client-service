@@ -1,6 +1,5 @@
 module Clients
   class CreationService
-
     def initialize(params:)
       @params = params.with_indifferent_access
     end

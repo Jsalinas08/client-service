@@ -1,0 +1,28 @@
+
+Layout/EmptyLinesAroundClassBody:
+  Exclude:
+
+
+Layout/LeadingCommentSpace:
+  Exclude:
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+
+Layout/TrailingEmptyLines:
+  Exclude:
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'config/**/*'
+    - 'lib/tasks/**/*'

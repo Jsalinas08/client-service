@@ -2,10 +2,11 @@ module RequestLogging
   extend ActiveSupport::Concern
 
   included do
-    after_action :log_request_info, only: [:create, :update, :show, :index]
+    after_action :log_request_info, only: [ :create, :update, :show, :index ]
   end
 
-  ENTITY_ID_PERMITTED = ["create", "show"].freeze
+  ENTITY_ID_PERMITTED = [ 'create', 'show' ].freeze
+
   private
 
   def log_request_info
