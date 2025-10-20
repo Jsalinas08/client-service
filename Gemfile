@@ -30,7 +30,7 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 gem 'dotenv-rails'
 group :development, :test do
-  gem 'rspec-rails', '6.1.5'
+  gem 'rspec-rails', '8.0.2'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
 
