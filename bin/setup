@@ -2,7 +2,7 @@
 require "fileutils"
 
 APP_ROOT = File.expand_path("..", __dir__)
-APP_NAME = "client-service"
+APP_NAME = "clients-service"
 
 def system!(*args)
   system(*args, exception: true)

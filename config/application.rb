@@ -38,5 +38,12 @@ module ClientService
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Silence unpermitted parameters warnings
+    config.action_controller.action_on_unpermitted_parameters = false
+
+    # Configure ActiveRecord logger level
+    config.active_record.logger = ActiveSupport::Logger.new(STDOUT)
+    config.active_record.logger.level = Logger::WARN
   end
 end
