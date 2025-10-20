@@ -28,9 +28,8 @@ gem 'bootsnap', require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-
+gem 'dotenv-rails'
 group :development, :test do
-  gem 'dotenv-rails'
   gem 'rspec-rails', '6.1.5'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
