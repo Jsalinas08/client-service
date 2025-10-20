@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   def unprocessable_entity(exception)
     publish_event(
-      payload: log_request_payload_error("422", exception.record.errors.full_messages)
+      payload: log_request_payload_error('422', exception.record.errors.full_messages)
     )
     render json: { errors: exception.record.errors }, status: __method__
   end

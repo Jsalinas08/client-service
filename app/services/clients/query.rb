@@ -1,5 +1,5 @@
 module Clients
-  class Query
+  class Query #DAO
     attr_reader :model
 
     def initialize(model: Client)

@@ -2,7 +2,7 @@ module RequestLogging
   extend ActiveSupport::Concern
 
   included do
-    after_action :log_request_info, only: [:create, :show, :index]
+    after_action :log_request_info, only: [:create, :update, :show, :index]
   end
 
   ENTITY_ID_PERMITTED = ["create", "show"].freeze
@@ -51,7 +51,7 @@ module RequestLogging
   end
 
   def object_id
-    JSON.parse(response&.body)&.dig("id")
+    JSON.parse(response&.body)&.dig('id')
   rescue => e
     Rails.logger.error("Failed to parse object_id: #{e.message}")
     nil
